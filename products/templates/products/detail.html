@@ -1,0 +1,13 @@
+{% extends 'products/basic_details_page.html' %}
+
+{% block content %}
+
+<h3>Product</h3>
+<p>{{ object.title }}</p>
+<h3>Description</h3>
+<p>{% if object.description != None and object.description != '' %}{{object.description}}{% else %}Coming Soon{% endif %}</p>
+<h3>Price</h3>
+<p>{{ object.price }}</p>
+<h3>Picture</h3>
+<img src="{{ object.image }}" alt="Error loading picture" width=200 height =250>
+{% endblock %}
