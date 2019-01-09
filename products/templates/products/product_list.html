@@ -1,0 +1,7 @@
+{% extends 'products/basic_page.html' %}
+{% block content %}
+
+{% for instance in object_list %}
+  <p><a href="/products/{{instance.id}}/">view product</a> title : {{instance.title}} </p>
+{% endfor %}
+{% endblock %}
